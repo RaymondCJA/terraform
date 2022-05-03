@@ -38,6 +38,7 @@ variable tags {
 }
 
 locals {
+  github_pat = var.github_pat
   image = var.image
   instance_type = var.instance_type
   environment = join(" ", [for k, v in var.environment : "--env ${k}=${v}"])
